@@ -1,0 +1,51 @@
+<% include partials/header.ejs %>
+
+
+<style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+</style>
+<h1>Books</h1>
+
+<table>
+    <thead><th>ISBN</th><th>TITLE</th><th>AUTHOR(s)</th><th>AVAILABILITY</th><th>CHECKOUT</th></thead>
+    <%result.forEach(function(result){%>
+
+        <tbody>
+            <tr>
+                <td>
+            <%=result.ISBN %>
+                </td>
+                <td>
+            <%=result.Title %>
+                </td>
+                <td>
+            <%=result.Authors %>
+                </td>
+                <td>
+            <%=result.ind %>
+                </td>
+           <td> <a href="/checkout/<%= result.ISBN %>">CheckOut</a></td>
+            </tr>
+        </tbody>
+    <% }); %>
+            
+</table>
+
+
+
+
+<% include partials/footer.ejs %>

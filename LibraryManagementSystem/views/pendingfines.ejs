@@ -1,0 +1,59 @@
+<% include partials/header.ejs %>
+<style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+</style>
+<h1>Let me help you settle fines</h1>
+<h3>Fines that can be payed now</h3>
+<table>
+        <thead><th>Card ID</th><th>Pending Fine</th><th>Pay Now</th></thead>
+        <%result.forEach(function(result){%>
+    
+            <tbody>
+                <tr>
+                    <td>
+                <%=result.CardID %>
+                    </td>
+                    <td>
+                <%=result.TotalFines %>
+                    </td>
+                    
+               <td> <a href="/payfines/<%= result.CardID %>">Pay</a></td>
+                </tr>
+            </tbody>
+        <% }); %>
+                
+</table>
+<h3>Total liable Fines</h3>
+<table>
+    <thead><th>Card ID</th><th>Total Pending Fine</th></thead>
+    <%result1.forEach(function(result1){%>
+
+        <tbody>
+            <tr>
+                <td>
+            <%=result1.CardID %>
+                </td>
+                <td>
+            <%=result1.TotalFines %>
+                </td>
+            
+            </tr>
+        </tbody>
+    <% }); %>
+            
+</table>
+<% include partials/footer.ejs %>

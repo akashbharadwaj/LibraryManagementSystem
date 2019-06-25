@@ -1,0 +1,18 @@
+<% include partials/header.ejs %>
+
+<h1>Create New Borrower</h1>
+
+<form method="POST" action="/createnewborrower">
+        Full Name *:
+        <input type="text" name="fullname" required>
+        SSN *:
+        <input type="text" name="ssn" required>
+        Address *:
+        <input type="text" name="address" required>
+        Phone (optional):
+        <input type="text" name="phone">
+        <input type="submit" name="submit">
+</form>
+
+
+<% include partials/footer.ejs %>

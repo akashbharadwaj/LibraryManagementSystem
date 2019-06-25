@@ -1,0 +1,12 @@
+<% include partials/header.ejs %>
+
+<h1>Pay Fines By Card ID</h1>
+
+<form method="POST" action="/pendingfinebycardid">
+        Card ID:
+        <input type="text" name="cardNumber"/>
+        <input type="submit" name="submit"/>
+</form>
+
+
+<% include partials/footer.ejs %>

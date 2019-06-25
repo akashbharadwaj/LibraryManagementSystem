@@ -1,0 +1,23 @@
+<% include partials/header.ejs %>
+
+
+
+
+<h1>Library Management System</h1>
+
+<form method="POST" action="/">
+        
+        <input type="text" name="query" class = "size" placeholder="ISBN/Title/Author"/>
+        <input type="submit" name="submit" />
+</form>
+<br/>
+<a href="/checkin" class = "anchorAlign">CheckIn</a>
+<br/>
+<a href="/createnewborrower" class = "anchorAlign">Create New Borrower</a>
+
+<br/>
+<a href="/updatefines" class = "anchorAlign">Update Fines</a>
+<br/>
+<a href="/pendingfines" class = "anchorAlign">Pending Fines</a>
+
+<% include partials/footer.ejs %>

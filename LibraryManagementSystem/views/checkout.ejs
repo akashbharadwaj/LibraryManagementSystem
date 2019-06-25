@@ -1,0 +1,16 @@
+<% include partials/header.ejs %>
+
+<h1>Check Out</h1>
+
+<form method="POST" action="/checkout/<%= isbn %>">
+        Enter Borrower's Card ID:
+        <input type="text" name="cardNumber"/>
+        <input type="submit" name="submit"/>
+</form>
+
+
+
+
+
+
+<% include partials/footer.ejs %>
